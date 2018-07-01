@@ -1,0 +1,26 @@
+{
+  "name": "lamba",
+  "version": "1.0.0",
+  "description": "CRUD application",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/viramya-2018/CRUD_mongodb.git"
+  },
+  "keywords": [
+    "mongodb",
+    "crud"
+  ],
+  "author": "Viramya <viramya2014@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/viramya-2018/CRUD_mongodb/issues"
+  },
+  "homepage": "https://github.com/viramya-2018/CRUD_mongodb#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
