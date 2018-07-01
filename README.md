@@ -5,3 +5,5 @@ Contact details use-case was considered for this demo.
 
 Front-end yet not integrated.
 Use POSTMAN and STUDIO3T for running this.
+
+Run npm install to get the required modules for this.
