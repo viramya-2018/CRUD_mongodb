@@ -17,6 +17,13 @@ function main() {
                     del();
                 }
         }
+        document.getElementById("name").value = "";
+        document.getElementById("number").value = "";
+        var genderBtns = document.getElementsByName("gender");
+        for (var i = 0; i < genderBtns.length; i++) {
+            if (genderBtns[i].checked)
+                genderBtns[i].checked = false;
+        }
     }
 }
 
