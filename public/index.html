@@ -4,11 +4,92 @@
 <head>
     <meta charset="utf-8" />
     <title>Simple CRUD</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
     <script type="text/javascript" src="./js/custom.js"></script>
 </head>
 
-<body>
-Hello World!
+<body onload="main()">
+    <table>
+        <tr>
+            <div id="getValue">
+                <div id="divName">
+                    <td>
+                        <label for "name">Name</label>
+                    </td>
+                    <td>
+                        <input type="text" placeholder="Enter name" id="name">
+                    </td>
+                </div>
+        </tr>
+        <tr>
+            <div id="divNumber">
+                <td>
+                    <label for "number">Number</label>
+                </td>
+
+                <td>
+                    <input type="text" placeholder="Enter number" id="number">
+                </td>
+            </div>
+        </tr>
+        <tr>
+            <div id="divGender">
+                <td>
+                    <label for "name">Gender</label>
+                </td>
+                <td>
+                    <input type="radio" name="gender" id="male">
+                    <label for "male">Male</label>
+                    <input type="radio" name="gender" id="female">
+                    <label for "female">Female</label>
+                </td>
+            </div>
+        </tr>
+        <tr>
+            <div id="divBloodgroup">
+                <td>
+                    <label for "name">Group</label>
+                </td>
+                <td>
+                    <select id="bloodGroup">
+                        <option value="b+">B+</option>
+                        <option value="o+">O+</option>
+                        <option value="o-">O-</option>
+                        <option value="ab+">AB+</option>
+                    </select>
+                </td>
+            </div>
+        </tr>
+        </div>
+    </table>
+    <br>
+    <div id="selectChoice">
+        <div id="divDisplay">
+            <input type="radio" name="choice" id="display" class='routeBtns' value="display">
+            <label for="display">Display</label>
+        </div>
+        <div id="divInsert">
+            <input type="radio" name="choice" id="insert" class='routeBtns' value="insert">
+            <label for="insert">Insert</label>
+        </div>
+        <div id="divUpdate">
+            <input type="radio" name="choice" id="update" class='routeBtns' value="update">
+            <label for="update">Update</label>
+        </div>
+        <div id="divDelete">
+            <input type="radio" name="choice" id="delete" class='routeBtns' value="delete">
+            <label for="delete">Delete</label>
+        </div>
+    </div>
+
+    <div id="goodToGo">
+        <br>
+        <input type="button" id="goodToGo" value="Done">
+    </div>
+    <div id="divDisplay">
+        <p id="textHere"></p>
+    </div>
 </body>
 
 </html>

@@ -7,7 +7,8 @@ router.get("/contacts", (request, response, next) => {
     // fetches all the contacts in the DB
     // then returns it in the response
     Contacts.find({}).then(function (contact) {
-        response.send(contact)
+        console.log(contact);
+        response.send(contact);
     })
 });
 
@@ -18,7 +19,7 @@ router.post("/contacts", (request, response, next) => {
     // and then returns the inserted contact in the response
     // if err occurs then the control is passes to next middleware
     Contacts.create(request.body).then((contact) => {
-        response.send(contact)
+        response.send(contact);
     }).catch(next);
 });
 
@@ -34,7 +35,7 @@ router.put("/contacts/:number", (request, response, next) => {
         Contacts.findOne({
             _id: id
         }).then(function (contact) {
-            response.send(contact)
+            response.send(contact);
         })
     }).catch(next);
 });
