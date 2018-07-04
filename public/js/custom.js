@@ -66,9 +66,42 @@ function insert() {
 }
 
 function update() {
+    console.log("in update");
+    var id = document.getElementById("objectId").value;
+    var n = document.getElementById("name").value;
+    var num = document.getElementById("number").value;
+
+    var gen;
+    var genderBtns = document.getElementsByName("gender");
+    for (var i = 0; i < genderBtns.length; i++) {
+        if (genderBtns[i].checked)
+            gen = genderBtns[i].value;
+    }
+
+    var dd = document.getElementById("bloodGroup");
+    var bg = dd.options[dd.selectedIndex].value;
     // to be changed
+    $.ajax({
+        type: "PUT",
+        url: "http://localhost:3030/api/contacts/" + id,
+        contentType: "application/json",
+        data: "{\n\t\"name\": \"" + String(n) + "\",\n    \"number\": \"" + String(num) + "\",\n    \"gender\": \"" + String(gen) + "\",\n    \"bloodGroup\": \"" + String(bg) + "\"\n}",
+        success: (data) => {
+            document.getElementById("textHere").innerHTML = JSON.stringify(data);
+        }
+    })
 }
 
 function del() {
-    // to be changed
+    console.log("in delete");
+    var id = document.getElementById("objectId").value;
+
+    $.ajax({
+        type: "DELETE",
+        url: "http://localhost:3030/api/contacts/" + id,
+        contentType: "application/json",
+        success: (data) => {
+            document.getElementById("textHere").innerHTML = JSON.stringify(data);
+        }
+    })
 }
